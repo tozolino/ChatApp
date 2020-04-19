@@ -1,7 +1,9 @@
 package com.example.chatapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -29,8 +31,11 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow), drawerLayout)
+        appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+            ), drawerLayout
+        )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
@@ -42,8 +47,29 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-}
 
-fun sendMessageBtnClicked(){
+    fun goToLoginActivity(view: View){
+        val loginIntent = Intent(this, LoginActivity::class.java)
+        startActivity(loginIntent)
+    }
+
+    fun addNewChannel(){
+
+    }
+
+    fun sendMessageBtnClicked() {
+
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 }
